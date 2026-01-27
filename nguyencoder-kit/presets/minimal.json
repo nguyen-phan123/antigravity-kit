@@ -1,0 +1,9 @@
+{
+  "name": "Minimal Kit",
+  "description": "Bare minimum: core rules and clean code principles only",
+  "modules": [
+    "skills/clean-code",
+    "skills/brainstorming",
+    "rules/GEMINI.md"
+  ]
+}

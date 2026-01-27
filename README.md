@@ -10,15 +10,17 @@
 ## Quick Install
 
 ```bash
-npx @vudovn/ag-kit init
+npx @YOUR_NPM_USERNAME/ag-kit init
 ```
 
 Or install globally:
 
 ```bash
-npm install -g @vudovn/ag-kit
+npm install -g @YOUR_NPM_USERNAME/ag-kit
 ag-kit init
 ```
+
+> **Note**: Replace `YOUR_NPM_USERNAME` with your npm username when publishing.
 
 This installs the `.agent` folder containing all templates into your project.
 
@@ -113,11 +115,11 @@ ag-kit init --dry-run      # Preview actions without executing
 ## Buy me coffee
 
 <p align="center">
-  <a href="https://buymeacoffee.com/vudovn">
+  <a href="https://buymeacoffee.com/YOUR_USERNAME">
     <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee" />
   </a>
 </p>
 
 ## License
 
-MIT © Vudovn
+MIT

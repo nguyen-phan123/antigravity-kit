@@ -4,11 +4,11 @@
   "description": "AI Agent templates - Skills, Agents, and Workflows for enhanced coding assistance",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vudovn/antigravity-kit.git"
+    "url": "git+https://github.com/nguyen-phan123/antigravity-kit.git"
   },
-  "homepage": "https://github.com/vudovn/antigravity-kit#readme",
+  "homepage": "https://github.com/nguyen-phan123/antigravity-kit#readme",
   "bugs": {
-    "url": "https://github.com/vudovn/antigravity-kit/issues"
+    "url": "https://github.com/nguyen-phan123/antigravity-kit/issues"
   },
   "keywords": [
     "antigravity",
@@ -18,6 +18,6 @@
     "skills",
     "templates"
   ],
-  "author": "vudovn",
+  "author": "nguyen-phan123",
   "license": "MIT"
 }

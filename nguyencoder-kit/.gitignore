@@ -1,0 +1,3 @@
+# Registry folder is generated from main .agent folder
+# Ignore it to avoid duplication in git
+registry/

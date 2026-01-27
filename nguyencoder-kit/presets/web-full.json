@@ -1,0 +1,16 @@
+{
+  "name": "Web Development Full Kit",
+  "description": "Complete web development stack with React, Next.js, and frontend tools",
+  "modules": [
+    "agents/frontend-specialist",
+    "skills/react-patterns",
+    "skills/nextjs-best-practices",
+    "skills/tailwind-patterns",
+    "skills/frontend-design",
+    "skills/seo-fundamentals",
+    "skills/performance-profiling",
+    "workflows/deploy",
+    "workflows/preview",
+    "rules/GEMINI.md"
+  ]
+}

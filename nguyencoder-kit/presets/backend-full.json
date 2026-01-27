@@ -1,0 +1,15 @@
+{
+  "name": "Backend Development Full Kit",
+  "description": "Complete backend development stack with Node.js, NestJS, and databases",
+  "modules": [
+    "agents/backend-specialist",
+    "skills/nodejs-best-practices",
+    "skills/nestjs-expert",
+    "skills/database-design",
+    "skills/api-patterns",
+    "skills/prisma-expert",
+    "skills/docker-expert",
+    "workflows/deploy",
+    "rules/GEMINI.md"
+  ]
+}
