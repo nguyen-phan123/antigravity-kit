@@ -1,40 +1,9 @@
 import Link from "next/link";
+import { Lightbulb } from "lucide-react";
+import agentsData from "@/services/agents.json";
 
 export default function AgentsPage() {
-    const agents = [
-        {
-            name: "orchestrator",
-            desc: "Multi-agent coordination and synthesis. Use when you need multiple agents working together on complex tasks."
-        },
-        {
-            name: "project-planner",
-            desc: "Discovery, Architecture, and Task Planning. Breaks down complex projects into actionable steps."
-        },
-        {
-            name: "security-auditor",
-            desc: "Master Cybersecurity (Audit + Pentest + Infra Hardening). Reviews code for security vulnerabilities."
-        },
-        {
-            name: "backend-specialist",
-            desc: "Backend Architect (API + Database + Server/Docker Deploy). Expert in API design and database architecture."
-        },
-        {
-            name: "frontend-specialist",
-            desc: "Frontend & Growth (UI/UX + SEO + Edge/Static Deploy). Builds maintainable React/Next.js systems."
-        },
-        {
-            name: "mobile-developer",
-            desc: "Mobile Specialist (Cross-platform + Mobile Performance). Expert in React Native, Flutter, and native development."
-        },
-        {
-            name: "debugger",
-            desc: "Systematic Root Cause Analysis & Bug Fixing. Uses methodical debugging approach."
-        },
-        {
-            name: "game-developer",
-            desc: "Specialized Game Logic & Assets & Performance. Expert in game development patterns."
-        },
-    ];
+    const agents = agentsData;
 
     return (
         <div className="max-w-3xl">
@@ -64,7 +33,7 @@ export default function AgentsPage() {
                     Agents are specialist AI personas configured with domain-specific expertise, tools, and behavioral patterns. Each agent is designed to excel in a particular area of software development.
                 </p>
                 <p className="text-base text-zinc-600 dark:text-zinc-400 mb-6">
-                    When you mention an agent by name in your prompt, the AI adopts that agent's expertise and applies relevant skills automatically.
+                    When you make a request, Antigravity Kit's <strong>Intelligent Routing</strong> system automatically detects which agents are needed and activates them for you. You can also mention them by name to force a specific perspective.
                 </p>
             </section>
 
@@ -74,19 +43,35 @@ export default function AgentsPage() {
                     How to Use Agents
                 </h2>
                 <p className="text-base text-zinc-600 dark:text-zinc-400 mb-6">
-                    Simply mention the agent name in your request:
+                    <strong>No need to mention agents explicitly!</strong> The system automatically detects and applies the right specialist(s) based on your request.
                 </p>
 
                 <div className="relative group mb-6">
                     <pre className="p-4 rounded-lg bg-zinc-900 dark:bg-zinc-950 overflow-x-auto border border-zinc-800 font-mono text-sm">
-                        <code className="text-zinc-100">{`Use the security-auditor agent to review authentication
-Use the frontend-specialist to analyze React components
-Use the backend-specialist to design API architecture`}</code>
+                        <code className="text-zinc-100">{`You: "Add JWT authentication"
+AI: 🤖 Applying @security-auditor + @backend-specialist...
+
+You: "Fix the dark mode button"
+AI: 🤖 Using @frontend-specialist...
+
+You: "Login returns 500 error"
+AI: 🤖 Using @debugger for systematic analysis...`}</code>
+                    </pre>
+                </div>
+
+                <p className="text-base text-zinc-600 dark:text-zinc-400 mb-6">
+                    However, you <strong>can still override</strong> this behavior by explicitly mentioning an agent name:
+                </p>
+
+                <div className="relative group mb-6">
+                    <pre className="p-4 rounded-lg bg-zinc-900 dark:bg-zinc-950 overflow-x-auto border border-zinc-800 font-mono text-sm">
+                        <code className="text-zinc-100">{`Use the security-auditor agent to review authentication...`}</code>
                     </pre>
                 </div>
 
                 <div className="p-4 rounded-lg border border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-950/20 mb-6">
                     <p className="text-sm text-blue-900 dark:text-blue-200">
+                        <Lightbulb className="w-4 h-4 inline" />
                         <strong className="font-semibold">Tip:</strong> Agents can work together! Use the <code className="px-1 py-0.5 rounded bg-blue-100 dark:bg-blue-900/40 font-mono text-xs">orchestrator</code> agent to coordinate multiple specialists on complex tasks.
                     </p>
                 </div>
@@ -113,7 +98,7 @@ Use the backend-specialist to design API architecture`}</code>
                                 </code>
                             </div>
                             <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                                {agent.desc}
+                                {agent.description}
                             </p>
                         </div>
                     ))}
